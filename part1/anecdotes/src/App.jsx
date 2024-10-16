@@ -26,7 +26,7 @@ const App = () => {
     "The only way to go fast, is to go well.",
   ];
 
-  const [points, setPoints] = useState(Array(anecdotes.length-1).fill(0));
+  const [points, setPoints] = useState(Array(anecdotes.length).fill(0));
   const [selected, setSelected] = useState(0);
 
   const handleNextClick = () => {
