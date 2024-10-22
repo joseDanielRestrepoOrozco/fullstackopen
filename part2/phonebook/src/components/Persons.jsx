@@ -4,13 +4,17 @@ const Person = ({ name, number }) => (
   </p>
 );
 
-const Persons = ({ persons }) => {
+
+const Persons = ({ persons, handleDelete }) => {
   return (
-    <>
+    <div>
       {persons.map((person) => (
-        <Person key={person.name} name={person.name} number={person.number} />
+        <div key={person.name}>
+          <Person name={person.name} number={person.number} />
+          <button onClick={() => handleDelete(person.id)}>delete</button>
+        </div>
       ))}
-    </>
+    </div>
   );
 };
 
